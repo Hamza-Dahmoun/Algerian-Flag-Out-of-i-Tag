@@ -19,6 +19,15 @@ body{
     z-index:-2;/*continue creating new context, this value will make the green background float under (behind) the coming pseudo class background color*/
     background-color: green;/*this green background color will float under the coming pseudo class background color*/
 }
+
+.flag::after{
+    width:140px; height:180px;/*set a rectangle half size of the flag*/    
+    content:"";/*this property is necessary for the pseudo class to work*/
+    position:absolute;/*we used to: 1-be able to use top, left,... 2-to do first step of creating a new context of z-index for the white background-color*/
+    top:0; left:50%;bottom:0;right:0;
+    z-index:-1;/*continue creating new context, this value will make the white background float over (in front of) the green background-color of the element, and will make this white background-color float under (behind) the red fontawesome icon*/
+    background-color:white;/*this white background color will float over the green background-color and under the red fontawesome icon*/
+}
 </style>
     </head>
     <body>
