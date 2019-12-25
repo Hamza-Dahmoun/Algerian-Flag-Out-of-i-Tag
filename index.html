@@ -9,7 +9,10 @@ body{
 .flag{
     width:280px; height:180px; color:red; line-height:180px; font-size:150px;
     position:relative;top:0; left:0;bottom:0;right:0;
-    /*background-color:white;*/
+}
+.flag::before{
+    width:140px; height:180px; background-color:green;content:"";
+    position:absolute;top:0; left:0;bottom:0;right:0;
 }
 .flag::after{
     width:140px; height:180px; background-color:white;content:"";
