@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <script src="https://kit.fontawesome.com/1c98e6559d.js" crossorigin="anonymous"></script>
+            <!--<script src="https://kit.fontawesome.com/1c98e6559d.js" crossorigin="anonymous"></script>-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+
 <style>
 body{
     background-color: #efefef;
 }
 .flag{
-    width:280px; height:180px; color:red; line-height:180px; font-size:150px;
-    position:relative;top:0; left:0;bottom:0;right:0;
-}
-.flag::before{
-    width:140px; height:180px; background-color:green;content:"";
-    position:absolute;top:0; left:0;bottom:0;right:0;
-}
-.flag::after{
-    width:140px; height:180px; background-color:white;content:"";
-    position:absolute;top:0; left:50%;bottom:0;right:0;
+    width:280px; height:180px;/*fixed size*/
+    color:red;/*red star and crescent*/
+    font-size:150px;/*fix the size of the star and crescent*/
+    line-height:180px; /*vertically center the star and crescent inside the rectangle(flag)*/
+    text-align: center;/*vertically center the star and crescent inside the rectangle(flag)*/
+    position:absolute;/*we used to: 1-be able to use top, left,... 2-to do first step of creating a new context of z-index for the green background-color*/
+    top:20%; left:20%;bottom:0;right:0; 
+    z-index:-2;/*continue creating new context, this value will make the green background float under (behind) the coming pseudo class background color*/
+    background-color: green;/*this green background color will float under the coming pseudo class background color*/
 }
 </style>
     </head>
     <body>
-        <div>
-            <i class="flag fas fa-star-and-crescent"></i>
-    </div>
+        <i class="flag fas fa-star-and-crescent"></i>
     </body>
 </html>
